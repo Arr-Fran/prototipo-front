@@ -7,7 +7,7 @@ async function detectarIdioma() {
 
 async function cargarTraducciones() {
     const idioma = await detectarIdioma();
-    const resp = await fetch(`/static/locales/${idioma}.json`);
+    const resp = await fetch(`static/locales/${idioma}.json`);
     return await resp.json(); // devuelve todo el JSON
 }
 
@@ -51,3 +51,4 @@ async function iniciarAnimacion() {
 }
 
 iniciarAnimacion();
+
